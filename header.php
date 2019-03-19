@@ -1,5 +1,5 @@
 <?php 
-   require_once("db/db.php");
+   require_once("db.php");
    $cats=$connect->query("SELECT * FROM cats");
    $cats=$cats->fetchall(PDO::FETCH_ASSOC);
 
@@ -12,7 +12,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shop</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
