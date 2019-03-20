@@ -7,7 +7,7 @@
     {
 ?>
         <div class="cart">
-            <a href="product.php?product=<?php echo $product["title"] ?>"><img src="img/<?php echo $product['img'] ?>" alt="Фото"></a>
+            <a href="product.php?product=<?php echo $product["title"] ?>"><img src="imgs/<?php echo $product['img'] ?>" alt="Фото"></a>
             <div class="cart-descr">
                 <?php echo $product["rus_name"] ?> в количестве <?php echo $product["quantity"] ?> шт на сумму <?php echo ($product["price"]*$product["quantity"]) ?> рублей
             </div>
