@@ -1,5 +1,5 @@
 <?php 
-   require_once("db.php");
+   require_once("db/db.php");
    $cats=$connect->query("SELECT * FROM cats");
    $cats=$cats->fetchall(PDO::FETCH_ASSOC);
 
