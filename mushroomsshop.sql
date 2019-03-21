@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 19 2019 г., 23:15
+-- Время создания: Мар 22 2019 г., 00:46
 -- Версия сервера: 5.6.41
 -- Версия PHP: 5.5.38
 
@@ -42,6 +42,32 @@ INSERT INTO `cats` (`id`, `name`, `rus_name`) VALUES
 (1, 'edible', 'Съедобные грибы'),
 (2, 'poisonous', 'Ядовитые грибы'),
 (3, 'unusual', 'Особые грибы');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `order`
+--
+
+CREATE TABLE `order` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `order`
+--
+
+INSERT INTO `order` (`id`, `username`, `email`, `phone`) VALUES
+(55, 'sasha274041', 'sup.isak@mail.ru', '375293394649'),
+(56, 'sasha274041', 'sup.isak@mail.ru', '375293394649'),
+(57, 'sasha274041', 'sup.isak@mail.ru', '375293394649'),
+(58, 'sasha274041', 'sup.isak@mail.ru', '375293394649'),
+(59, 'sasha274041', 'sup.isak@mail.ru', '375293394649'),
+(60, 'sasha274041', 'sup.isak@mail.ru', '375293394649'),
+(61, 'sasha274041', 'sup.isak@mail.ru', '375293394649');
 
 -- --------------------------------------------------------
 
@@ -85,6 +111,12 @@ ALTER TABLE `cats`
   ADD KEY `name` (`name`);
 
 --
+-- Индексы таблицы `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `products`
 --
 ALTER TABLE `products`
@@ -102,10 +134,16 @@ ALTER TABLE `cats`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT для таблицы `order`
+--
+ALTER TABLE `order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

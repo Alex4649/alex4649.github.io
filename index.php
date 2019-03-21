@@ -14,7 +14,7 @@
             }
         } catch (Exception $e) {
             ?>
-    <img src="imgs/404.jpg" alt="404">
+    <img src="img/404.jpg" alt="404">
     <?php
         };
     } else
@@ -27,7 +27,7 @@
     <? foreach($products as $product) { ?>
         <div class="card">
             <a href="product.php?product=<?php echo $product["title"] ?>">
-                <img src="imgs/<?php echo $product["img"] ?>" alt="Фото">
+                <img src="img/<? echo $product["img"] ?>" alt="Фото">
             </a>
             <div class="label">Товар (<? echo $product["price"] ?> рублей)</div>
             <form action="actions/add.php" method="post">
