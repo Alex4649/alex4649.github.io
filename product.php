@@ -6,7 +6,8 @@
         $currentProd = $_GET["product"];
         $product = $connect->query("SELECT * FROM products WHERE title='$currentProd'");
         $product = $product->fetch(PDO::FETCH_ASSOC);
-    };
+        if(isset($product["rus_name"]))
+        {
 ?>
 <div class="product-card">
     <a href="index.php">Вернуться на главную</a>
@@ -19,3 +20,11 @@
         <input type="submit" name="" value="Добавить в корзину">
     </form>
 </div>
+<?php 
+    } else {
+        ?>
+        <h3 class="back">Гриб не найден</h3>
+        <a href="index.php" class="back">На главную</a>
+        <?php
+    }}
+?>
