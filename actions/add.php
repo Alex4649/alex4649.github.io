@@ -4,6 +4,10 @@
     session_start();
     require_once("../db/db.php");
 
+    if(isset($_SESSION["order"]))
+    {
+    	unset($_SESSION["order"]);
+    };
     if(isset($_POST["id"]))
     {
     	$id = $_POST["id"];
@@ -25,4 +29,4 @@
         };
         $_SESSION["totalPrice"] = $_SESSION["totalPrice"] ? $_SESSION["totalPrice"] += $product["price"] : $product["price"];
     };
-    header("Location: ../index.php ");
+    header("Location: {$_SERVER["HTTP_REFERER"]} ");
